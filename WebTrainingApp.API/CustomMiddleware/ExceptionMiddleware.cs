@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace WebTraining.API.CustomMiddleware
 {
-    public class ExceptionMiddleware
+    public class ExceptionMiddleware 
     {
         private readonly RequestDelegate _next;
         private readonly ILoggerManager _logger;
