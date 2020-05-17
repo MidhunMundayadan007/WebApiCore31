@@ -22,5 +22,13 @@ namespace WebTraining.API.Controllers
             bool result = topicService.SaveTopic(topic);
             return Ok(result);
         }
+
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            var training = topicService.GetTopicByTrainingId(id);
+            return Ok(training);
+        }
     }
 }

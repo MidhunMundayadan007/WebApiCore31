@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WebTraining.DAL.EntityModels;
 using WebTraining.BAL.Services;
 using LoggerServcie;
+using System.Security.Claims;
 
 namespace WebTraining.API.Controllers
 {
@@ -64,5 +65,13 @@ namespace WebTraining.API.Controllers
 
             return Ok(user);
         }
+        [HttpPost]
+        public IActionResult Refresh(string token, string refreshToken)
+        {
+            ClaimsIdentity identity = HttpContext.User.Identity as ClaimsIdentity;
+            return _userService.RefreshToken(token, refreshToken, identity);
+        }
+
+   
     }
 }

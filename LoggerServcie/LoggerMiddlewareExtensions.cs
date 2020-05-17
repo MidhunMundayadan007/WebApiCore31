@@ -18,7 +18,7 @@ namespace LoggerServcie
             try
             {
 
-                LogManager.LoadConfiguration(@"C:\Users\Mundayadan\Source\Repos\LoggerServcie\nlog.config");
+                LogManager.LoadConfiguration(@"E:\WebDevelopment\WebApi\LoggerServcie\nlog.config");
             }
             catch (Exception ex)
             {

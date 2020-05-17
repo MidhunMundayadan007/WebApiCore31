@@ -13,7 +13,9 @@ namespace WebTraining.DAL
         {
 
         }
+        public DbSet<UserRoleTable> UserRoles { get; set; }
         public DbSet<UserRegistration> UserRegistrations { get; set; }
+        public DbSet<UserLoggedInDetails> UserLoggedInDetails { get; set; }
         public DbSet<Training> Trainings { get; set; }
         public DbSet<Topics> Topics { get; set; }
     }
